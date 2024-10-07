@@ -59,6 +59,72 @@
         .my-float {
             margin-top: 16px;
         }
+
+        .attraction_item {
+            margin-bottom: 30px;
+        }
+
+        .attraction_row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        .wp_caption img {
+            width: 370px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        .attraction_content-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .alignleft {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .alignright {
+            float: right;
+            margin-left: 20px;
+        }
+
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            .wp_caption img {
+                width: 100%;
+                height: auto;
+            }
+
+            .alignleft,
+            .alignright {
+                float: none;
+                margin: 0;
+                width: 100%;
+            }
+
+            .attraction_content-title,
+            p {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -196,8 +262,8 @@
                                         class="attraction-icon-drop fa fa-angle-down"></span></h2>
 
                                 <div class="attraction_sidebar-content">
-                                    <h3 class="attraction_title"><i class="fa fa-map-marker"></i>Island Retreat Hotel
-                                        &amp; RESORT</h3>
+                                    <!-- <h3 class="attraction_title"><i class="fa fa-map-marker"></i>Island Retreat Hotel
+                                        &amp; RESORT</h3> -->
 
                                     <!-- <select class="attraction_select awe-select">
                                         <option>Local Attractions</option>
@@ -251,59 +317,171 @@
 
                         <div class="col-md-8">
 
-                            <!-- <div class="attraction_detail">
-                                <div class="attraction_detail-header">
-                                    <h2 class="attraction_detail-title"><i class="fa fa-map-marker"></i>Carytown Street</h2>
-                                    <ul>
-                                        <li>
-                                            <span>ADDRESS:</span> 3325 West Cary Street<br>
-                                        </li>
-                                        <li>
-                                            <span>Website:</span> <a href="#">Carytown street</a><br>
-                                        </li>
-                                        <li>
-                                            <span>google map:</span> <a href="#">Google Map</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> -->
-
                             <div class="attraction_content" id="attraction_content">
-
-                                <h2 class="attraction_content-title">Known as the Mile of Style</h2>
+                                <!-- 
+                                <h2 class="attraction_content-title">Known as the Mile of Style</h2> -->
                                 <br>
-                                <div class="wp_caption aligncenter">
-                                    <img src="https://content.jdmagicbox.com/thane/p9/022pxx22.xx22.141218102531.a6p9/catalogue/upvan-lake-jk-gram-thane-west-thane-tourist-attraction-sedj2.png"
+                                <div id="firstimg" class="wp_caption aligncenter">
+                                    <img style="width: 500px; height: 400px;"  src="https://content.jdmagicbox.com/thane/p9/022pxx22.xx22.141218102531.a6p9/catalogue/upvan-lake-jk-gram-thane-west-thane-tourist-attraction-sedj2.png"
                                         alt="">
                                 </div>
                                 <br>
                                 <br>
-
+                                <!-- 
                                 <p>Known as the <b>Mile of Style</b>, Carytown offers everything you need to Eat, Shop,
                                     and Play. Our sidewalks are lined with unique boutiques, restaurants, specialty
                                     shops, spas, and professional services. Enjoy our eclectic collection of
                                     award-winning, locally-owned businesses. Spend the day in the area voted “<b>Best
                                         Shopping</b> Neighborhood in Virginia” by the readers of Southern <a
-                                        href="#">Living magazine.</a></p>
+                                        href="#">Living magazine.</a></p> -->
                                 <br><br>
 
-                                <div class="wp_caption alignleft">
-                                    <img src="images/attractions/img-2.jpg" alt="">
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignleft">
+                                        <img width="370px" height="270px"
+                                            src="https://www.trawell.in/admin/images/upload/699699205Alibaug_Nagaon_Beach_Main.jpg" alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Nagaon Beach</h2>
+                                    <p>
+                                        Located just a short drive away, Nagaon Beach is known for its clean shores and calm waters, making it a perfect
+                                        spot for swimming, beach sports, and relaxation amidst coconut trees.
+                                    </p>
                                 </div>
 
-                                <br>
-                                <br>
 
-                                <h2 class="attraction_content-title">Known as the Mile of Style</h2>
-                                <br>
-                                <p>
-                                    Known as the Mile of Style, <b>Carytown</b> offers everything you need to Eat, Shop,
-                                    and Play. Our sidewalks are lined with unique boutiques, restaurants, specialty
-                                    shops, spas, and professional services. Enjoy our eclectic collection of
-                                    award-winning, locally-owned businesses. Spend the day in the area voted “<b>Best
-                                        Shopping Neighborhood in Virginia</b>” by the readers of <a href="#">Southern
-                                        Living magazine.</a>
-                                </p>
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignright">
+                                        <img width="370px" height="270px"
+                                            src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2023/12/28/26c820c8ab6ce022aa8e191163d37c65_1000x1000.jpg" alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Alibaug Beach</h2>
+                                    <p>
+                                        Famous for its stunning sunsets and the Alibaug Fort visible during low tide, Alibaug Beach is ideal for long walks
+                                        along the shore and enjoying local seafood delicacies.
+                                    </p>
+                                </div>
+
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignleft">
+                                        <img width="370px" height="270px" src="https://amansaraa.com/media/Kulaba-Fort.jpg" alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Kolaba Fort</h2>
+                                    <p>
+                                        A historic sea fort located near Alibaug Beach, Kolaba Fort offers visitors a glimpse into the Maratha Empire’s past.
+                                        Explore its old structures and enjoy panoramic views of the Arabian Sea.
+                                    </p>
+                                </div>
+
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignright">
+                                        <img width="370px" height="270px"
+                                            src="https://lh4.googleusercontent.com/proxy/O0ccFsunaepiMnFmMMwh3yHe21IfRqtuGNDuNyugRkbZ6LpQfOYmR1ia0nChvDKrHr32ewTCnYjTO5zmsGH46O44fv_lej_3UqZFfmOOYXxsNjclMvmlKliq3ayCJ992RjLf" alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Varsoli Beach</h2>
+                                    <p>
+                                        A quieter, more secluded beach compared to others in the area, Varsoli Beach is perfect for those looking to unwind
+                                        and enjoy peaceful moments by the sea, surrounded by beautiful natural scenery.
+                                    </p>
+                                </div>
+                                
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignleft">
+                                        <img width="370px" height="270px" src="https://ankusharora.net/wp-content/uploads/2017/07/img_0811.jpg?w=720"
+                                            alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Karmarkar Museum</h2>
+                                    <p>
+                                        A unique museum showcasing the works of renowned sculptor Nanasaheb Karmarkar. This small but intriguing space
+                                        displays a range of exquisite sculptures that art lovers will appreciate.
+                                    </p>
+                                </div>
+
+
+                                
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignright">
+                                        <img width="370px" height="270px" src="https://kokanplaces.com/wp-content/uploads/2019/12/Revdanda.jpg"
+                                            alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Revdanda Beach</h2>
+                                    <p>
+                                        Just a short distance from Alibaug, Revdanda Beach is famous for its scenic beauty
+                                        and tranquility. Visitors can explore the ruins of an ancient Portuguese fort and
+                                        enjoy stunning views of the coastline.
+                                    </p>
+                                </div>
+
+                                    
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignleft">
+                                        <img width="370px" height="270px" src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/7/2017/01/10012017_kihimbeach03.jpg"
+                                            alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Kihim Beach</h2>
+                                    <p>
+                                        Kihim Beach is renowned for its golden sands and lush greenery. It's an excellent
+                                        destination for nature lovers, offering opportunities for bird watching and
+                                        leisurely walks along the shore.
+                                    </p>
+                                </div>
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignright">
+                                        <img width="370px" height="270px" src="https://www.mappls.com/place/159QOR_1659012050435_0.png"
+                                            alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Awas Beach</h2>
+                                    <p>
+                                        A hidden gem, Awas Beach is less crowded and provides a serene environment perfect
+                                        for unwinding. Visitors can enjoy water activities or simply relax while enjoying
+                                        the picturesque views.
+                                    </p>
+                                </div>
+
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignleft">
+                                        <img width="370px" height="270px" src="https://www.konkan.me/wp-content/uploads/2017/05/sasawane-beach.jpg"
+                                            alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Sasawane Beach</h2>
+                                    <p>
+                                        Sasawane Beach is known for its clean, quiet surroundings and beautiful landscapes.
+                                        It’s an ideal spot for families and couples looking for a peaceful day at the beach,
+                                        away from the hustle and bustle.
+                                    </p>
+                                </div>
+
+
+                                <div class="attraction_item clearfix">
+                                    <div class="wp_caption alignright">
+                                        <img width="370px" height="270px" src="https://lh6.googleusercontent.com/proxy/H9cRultfWxy_QcUGEpkn7Zk0AFW6eTFLxaRMvghgv50z4As9bN9Uq1ZZ8_bYbUltnafabQ47k5x527xoL2sP2os2OmbBte7Z6jM04obTLpI-wwy5Q9Gpe6WeNr7M3sHlFHoL"
+                                            alt="">
+                                    </div>
+                                
+                                    <h2 class="attraction_content-title">Mandwa Beach</h2>
+                                    <p>
+                                        Mandwa Beach is known for its pristine sand and serene atmosphere, making it a
+                                    popular spot for picnics and water sports. It's also a great place to enjoy a
+                                    relaxing day away from the crowds.
+                                    </p>
+                                </div>
+
+                                
+
 
                             </div>
 
