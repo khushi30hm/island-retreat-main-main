@@ -54,6 +54,17 @@
         .my-float {
             margin-top: 16px;
         }
+        .video-banner {
+    width: 100%;
+    height: auto;
+}
+
+.video-banner__video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
     </style>
 </head>
 
@@ -215,34 +226,34 @@
         </section>
         <!-- END / BANNER SLIDER -->
 
-
         <!-- ABOUT -->
-        <section class="section-home-about bg-white">
-            <div class="container">
-                <div class="home-about">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="img">
-                                <a href="#"><img src="img/banner3.jpg" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="text">
-                                <h2 class="heading">ABOUT US</h2>
-                                <span class="box-border"></span>
-                                <p>
-                                    Welcome to Island Retreat - Alibaug, your perfect escape near the tranquil shores of
-                                    Nagaon Beach. Nestled just 1.5 miles from the beach, our resort offers a peaceful
-                                    retreat with modern comforts. Enjoy a refreshing swim in our outdoor pool, relax in
-                                    our lush garden, or dine in our on-site restaurant.
-                                </p>
-                                <a href="about.html" class="awe-btn awe-btn-default">Know More</a>
-                            </div>
-                        </div>
+      <!-- ABOUT SECTION WITH VIDEO BANNER -->
+<section class="section-home-about bg-white">
+    <div class="container">
+        <div class="home-about">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-banner">
+                        <video autoplay muted loop class="video-banner__video">
+                            <source src="newimgs/vid.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text">
+                        <h2 class="heading">ABOUT US</h2>
+                        <span class="box-border"></span>
+                        <p>
+                            Welcome to Island Retreat - Alibaug, your perfect escape near the tranquil shores of Nagaon Beach.
+                            Nestled just 1.5 miles from the beach, our resort offers a peaceful retreat with modern comforts.
+                        </p>
+                        <a href="about.html" class="awe-btn awe-btn-default">Know More</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
         <!-- END / ABOUT -->
 
         <!-- ACCOMD ODATIONS -->
