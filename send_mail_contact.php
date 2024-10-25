@@ -1,18 +1,61 @@
 <?php
-$to = 'info@megadrupal.com';
-$from = $_POST['email'];
-$name = $_POST['name'];
-$subject = $_POST['subject'];
-$msg = $_POST['message'];
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
-$headers = 'From: '.$from . "\r\n" .
-    'Reply-To: '.$from . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-if(mail($to, $subject, $msg, $headers)){
-    echo '<p class="reservation-confirm">Thanks for your contact. We will reply soon.</p>';
-}else{
-    echo '<h2>Send email fail</h2>';
+if (isset($_POST["send"])) {
+    $name = htmlspecialchars(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL);
+    $subject = htmlspecialchars(trim($_POST["subject"]));
+    $message = htmlspecialchars(trim($_POST["message"]));
+
+    if ($email && !empty($name) && !empty($subject) && !empty($message)) {
+        $mail = new PHPMailer(true);
+
+        try {
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'khushi.hospitalityminds@gmail.com';
+            $mail->Password = 'vqzfjvvwegwxnoty';
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
+
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            );
+
+            $mail->setFrom('khushi.hospitalityminds@gmail.com', $name);
+            $mail->addAddress('booking.islanderretreat@gmail.com'); 
+
+            $mail->isHTML(true);
+            $mail->Subject = $subject;
+            $mail->Body = "Name: " . $name . "<br>" .
+                          "Email: " . $email . "<br><br>" .
+                          "Message: <br>" . nl2br($message);
+            
+            $mail->send();
+            echo "<script>
+                    alert('Mail sent successfully');
+                    window.location.href = 'index.html';
+                  </script>";
+        } catch (Exception $e) {
+            echo "<script>
+                    alert('Mail could not be sent. Error: {$mail->ErrorInfo}');
+                  </script>";
+        }
+    } else {
+        echo "<script>
+                alert('Please fill in all fields correctly.');
+              </script>";
+    }
 }
-?>
